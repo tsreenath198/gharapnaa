@@ -1,0 +1,126 @@
+#Options +FollowSymLinks -MultiViews
+Options +FollowSymLinks
+RewriteEngine On
+#RewriteBase /gharapnaa/
+
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+#RewriteCond !%{HTTP_HOST} ^gharapnaa.com [NC]
+#RewriteRule ^(.*)$ https://www.gharapnaa.com/$1 [L,R=301]
+
+#RewriteCond %{HTTP_HOST} ^gharapnaa.com$ [NC]
+#RewriteRule (.*) https://www.gharapnaa.com/$1 [R=301,L] 
+
+ErrorDocument 404 /notfound.php
+
+RewriteRule ^super/buy/$ super/buy-page.php [QSA,L]
+
+
+#========== New ============
+RewriteRule ^about-us/$ about-us.php [QSA,L]
+RewriteRule ^contact/$ contact.php [QSA,L]
+RewriteRule ^property-list/$ property-list.php?page=$1 [QSA,L]
+RewriteRule ^add-property/$ add-property.php [QSA,L]
+RewriteRule ^wishlist/$ wishlist.php [QSA,L]
+RewriteRule ^change-password/$ change-password.php [QSA,L]
+RewriteRule ^my-profile/$ my-profile.php [QSA,L]
+RewriteRule ^logout/$ logout.php [QSA,L]
+
+
+RewriteRule ^super/dashboard/$ super/dashboard.php [QSA,L]
+RewriteRule ^super/change-password/$ super/change-password.php [QSA,L]
+RewriteRule ^super/add-employee/$ super/add-employee.php [QSA,L]
+
+#RewriteRule ^super/reminders-list/$ super/reminders-list.php [QSA,L]
+RewriteRule ^super/reminders-list/([a-zA-Z0-9-z\-]+)/$ super/reminders-list.php?type=$1 [QSA,L]
+RewriteRule ^super/reminders-list/([a-zA-Z0-9-z\-]+)/([0-9]+)/$ super/reminders-list.php?type=$1&page=$2 [QSA,L]
+RewriteRule ^super/logout/$ super/logout.php [QSA,L]
+
+#========== New ============
+
+#========= Admin ================
+RewriteRule ^super/masteradmin/dashboard/$ super/masteradmin/dashboard.php [QSA,L]
+#========= Admin ================
+
+#========= Sales ================
+RewriteRule ^super/sales/dashboard/$ super/sales/dashboard.php [QSA,L]
+#========= Sales ================
+
+#========= Marketing ================
+RewriteRule ^super/marketing/dashboard/$ super/marketing/dashboard.php [QSA,L]
+#========= Marketing ================
+
+
+
+
+RewriteRule ^property-details/(.*)/$ property-details.php?prid=$1 [QSA,L]
+RewriteRule ^property-edit/(.*)/$ add-property.php?prid=$1 [QSA,L]
+RewriteRule ^property/([0-9]+)/$ property.php?page=$1 [QSA,L]
+
+RewriteRule ^featured/apartment/([0-9]+)/$ featured.php?cat=1&page=$1 [QSA,L]
+RewriteRule ^featured/independent/([0-9]+)/$ featured.php?cat=2&page=$1 [QSA,L]
+RewriteRule ^featured/plot/([0-9]+)/$ featured.php?cat=3&page=$1 [QSA,L]
+RewriteRule ^featured/villa/([0-9]+)/$ featured.php?cat=4&page=$1 [QSA,L]
+RewriteRule ^featured/agriculture/([0-9]+)/$ featured.php?cat=5&page=$1 [QSA,L]
+
+
+
+
+RewriteRule ^super/my-profile/$ super/my-profile.php [QSA,L]
+
+RewriteRule ^super/property/([0-9]+)/$ super/property-list.php?page=$1 [QSA,L]
+RewriteRule ^super/properties/([0-9]+)/$ super/property-list.php?page=$1 [QSA,L]
+RewriteRule ^super/properties/publish/([0-9]+)/$ super/property-list.php?type=published&publish=1&page=$1 [QSA,L]
+RewriteRule ^super/properties/unpublish/([0-9]+)/$ super/property-list.php?type=un-published&publish=2&page=$1 [QSA,L]
+
+RewriteRule ^super/properties/all/([0-9]+)/$ super/property-list.php?type=all&page=$1 [QSA,L]
+RewriteRule ^super/properties/active/([0-9]+)/$ super/property-list.php?type=active&page=$1 [QSA,L]
+RewriteRule ^super/properties/inactive/([0-9]+)/$ super/property-list.php?type=in-active&page=$1 [QSA,L]
+
+RewriteRule ^super/properties/pending/([0-9]+)/$ super/property-list.php?type=pending&publish=0&page=$1 [QSA,L]
+
+RewriteRule ^super/add-property/$ super/edit-property.php [QSA,L]
+RewriteRule ^super/property-details/(.*)/$ super/property-details.php?prid=$1 [QSA,L]
+RewriteRule ^super/property-update/(.*)/$ super/edit-property.php?prid=$1 [QSA,L]
+RewriteRule ^super/property-edit/(.*)/$ super/edit-property.php?prid=$1 [QSA,L]
+
+RewriteRule ^super/featured/apartment/([0-9]+)/$ super/featured.php?cat=1&page=$1 [QSA,L]
+RewriteRule ^super/featured/independent/([0-9]+)/$ super/featured.php?cat=2&page=$1 [QSA,L]
+RewriteRule ^super/featured/plot/([0-9]+)/$ super/featured.php?cat=3&page=$1 [QSA,L]
+RewriteRule ^super/featured/villa/([0-9]+)/$ super/featured.php?cat=4&page=$1 [QSA,L]
+RewriteRule ^super/featured/agriculture/([0-9]+)/$ super/featured.php?cat=5&page=$1 [QSA,L]
+
+RewriteRule ^super/property-enquiries/([0-9]+)/$ super/property-enquiries.php?page=$1 [QSA,L]
+RewriteRule ^super/enquiries/([0-9]+)/$ super/enquiries.php?page=$1 [QSA,L]
+RewriteRule ^super/users/([0-9]+)/$ super/users.php?page=$1 [QSA,L]
+
+
+RewriteRule ^super/employees/([0-9]+)/$ super/employees.php?page=$1 [QSA,L]
+
+
+
+RewriteRule ^super/add-employee/([0-9]+)/$ super/add-employee.php?page=$1 [QSA,L]
+RewriteRule ^super/edit-employee/([0-9]+)/$ super/add-employee.php?eid=$1 [QSA,L]
+
+RewriteRule ^super/cities/([0-9]+)/$ super/cities-list.php?page=$1 [QSA,L]
+
+RewriteRule ^super/add-city/$ super/add-city.php [QSA,L]
+RewriteRule ^super/edit-city/([0-9]+)/$ super/add-city.php?cityId=$1 [QSA,L]
+
+RewriteRule ^super/apartment/([0-9]+)/$ super/property-list.php?cat=1&page=$1 [QSA,L]
+RewriteRule ^super/independent/([0-9]+)/$ super/property-list.php?cat=2&page=$1 [QSA,L]
+RewriteRule ^super/plot/([0-9]+)/$ super/property-list.php?cat=3&page=$1 [QSA,L]
+RewriteRule ^super/villa/([0-9]+)/$ super/property-list.php?cat=4&page=$1 [QSA,L]
+RewriteRule ^super/agriculture/([0-9]+)/$ super/property-list.php?cat=5&page=$1 [QSA,L]
+
+RewriteRule ^super/add-contact-activity/([0-9]+)/$ super/add-contact-activity.php?type=contact&eId=$1 [QSA,L]
+RewriteRule ^super/add-property-activity/([0-9]+)/$ super/add-property-activity.php?type=property&eId=$1 [QSA,L]
+
+RewriteRule ^super/reports/enquiry-activity-report/([0-9]+)/$ super/reports/activity-list-report.php?type=enquiry&page=$1 [QSA,L]
+RewriteRule ^super/reports/property-activity-report/([0-9]+)/$ super/reports/activity-list-report.php?type=property&page=$1 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
