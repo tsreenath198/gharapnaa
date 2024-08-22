@@ -39,10 +39,10 @@
 	{
 		define("IS_PROD", 0);
 		define("RECORDS_LIMIT", 10);
-		define("HOST_NAME", "localhost");
-		define("HOST_USER","root");
-		define("HOST_DB_NAME","gharapnaa");
-		define("HOST_PWD","");
+		define("HOST_NAME", "192.185.129.64");
+		define("HOST_USER","uskcorpi_gharapnaa");
+		define("HOST_DB_NAME","uskcorpi_gharapnaa");
+		define("HOST_PWD","Infosys@123");
 	}
 
 	define("TOTAL_PAGES", 0);
