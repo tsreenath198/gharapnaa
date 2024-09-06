@@ -210,7 +210,7 @@
 			/* ========= Create Directory Path ======== */
 			
 			
-			function insertImage($path='', $file, $width=770, $height=330, $prevFile='', $fileSize = 0)
+			function insertImage($path, $file, $width=770, $height=330, $prevFile='', $fileSize = 0)
 			{
 				$status = array();
 				if(!is_dir($path))

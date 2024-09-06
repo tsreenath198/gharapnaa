@@ -26,24 +26,28 @@
 	define("SMSUSER", "");
 	define("SENDEID", "");
 
-	if($_SERVER['HTTP_HOST']=='gharapnaa.com' || $_SERVER['HTTP_HOST']=='www.gharapnaa.com')
+	if($_SERVER['HTTP_HOST']=='gharapnaa.com' || $_SERVER['HTTP_HOST']=='www.gharapnaa.com' || $_SERVER['HTTP_HOST']=='gharapnaa.uskcorp.in')
 	{
 		define("IS_PROD", 1);
 		define("RECORDS_LIMIT", 30);
-		define("HOST_NAME", "localhost");
-		define("HOST_USER","gharapnaa_user");
-		define("HOST_DB_NAME","gharapnaa");
-		define("HOST_PWD","gharapnaa!@#4");
-	}
-	else
-	{
-		define("IS_PROD", 0);
-		define("RECORDS_LIMIT", 10);
+		// define("HOST_NAME", "localhost");
+		// define("HOST_USER","gharapnaa_user");
+		// define("HOST_DB_NAME","gharapnaa");
+		// define("HOST_PWD","gharapnaa!@#4");
 		define("HOST_NAME", "192.185.129.64");
 		define("HOST_USER","uskcorpi_gharapnaa");
 		define("HOST_DB_NAME","uskcorpi_gharapnaa");
 		define("HOST_PWD","Infosys@123");
 	}
+	else
+	{
+		define("IS_PROD", 0);
+		define("RECORDS_LIMIT", 10);
+		define("HOST_NAME", "localhost");
+		define("HOST_USER","root");
+		define("HOST_DB_NAME","gharapnaa");
+		define("HOST_PWD","");
+	}	
 
 	define("TOTAL_PAGES", 0);
 	define("RECORDS", 0);
