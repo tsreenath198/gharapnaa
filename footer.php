@@ -146,19 +146,19 @@
 											  <label>Email ID</label><span class="text-danger"> * <span id="err_emailid" class="notify-otp err-msg"></span></span>
 												<div class="input-group mb-3">
 													<input type="text" class="form-control requiredre mand-err" name="emailid" id="emailid" placeholder="Email Id" aria-label="Recipient's username" aria-describedby="basic-addon2">
-													<div class="input-group-append">
+													<!-- <div class="input-group-append">
 													<button class="btn btn-danger p-5px" type="button" id="regMailOTP" onclick="checkValidate('emailid', /^([\w-\.]+@([\w-]+\.)+[\w-]{2,15})?$/, '', ['Please Enter Email', 'Invalid Mail.'])" >Send OTP</button>
-													</div>
+													</div> -->
 												</div>
 										   </div>
 										   <div class="form-group">
 											  <label>Mobile</label><span class="text-danger"> * <span id="err_mobile" class="err-msg"></span></span>
 											  <div class="input-with-icon">
-												 <input type="text" class="form-control requiredre mand-err" name="mobile" style="padding-left: 26px !important;" id="mobile" onkeyup="checkValidate('mobile', /^[0-9]{0,15}$/, '(Enter digits only.)');">
+												 <input type="text" class="form-control requiredre mand-err" name="mobile" style="padding-left: 26px !important;" id="mobile">
 												 <i class="ti-user"></i>
 											  </div>
 										   </div>
-										   <div class="form-group">
+										   <!-- <div class="form-group">
 												<label>OTP</label><span class="text-danger"> * <span class="notify-verifyotp"></span></span>
 												<div class="input-group mb-3">
 													<input type="text" class="form-control requiredre" name="reg_verify_otp" id="reg_verify_otp" placeholder="OTP" aria-label="otp" aria-describedby="otp" maxlength="6" />
@@ -166,7 +166,7 @@
 													<button class="btn btn-danger p-5px" type="button" id="regVerifyOTP" onclick="checkValidate('reg_verify_otp', /^[0-9]{0,6}$/, '', ['', 'Digits Only.'])" >Verify</button>
 													</div>
 												</div>
-										   </div>
+										   </div> -->
 										</div>
 									   <div id="enableReg" class="hide">
 										   <div class="form-group">
